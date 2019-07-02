@@ -15,11 +15,11 @@
 //Questão 5
 var users = [
     {
-    name: "Diego",
+    name: "David",
     skills: ["Javascript", "ReactJS", "Redux"]
     },
     {
-    name: "Gabriel",
+    name: "Helvécio",
     skills: ["VueJS", "Ruby on Rails", "Elixir"]
     }
    ];
@@ -90,6 +90,6 @@ of array skills. and for of to scroll the vector
 */
 function jReport(users){
     for(var user of users){
-        console.log("The "+ user.name + " has the skills: " + user.skills.join());        
+        console.log(`The ${user.name} has the skills ${user.skills.join()}`);        
     }
 };
