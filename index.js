@@ -1,5 +1,8 @@
 //console.log(question01());
-question02(3,30);
+//pairs(3,30);
+
+var skills =  ["Javascript", "ReactJS", "React Native"];
+doHaveSkill(skills);
 
 
 /*
@@ -25,8 +28,16 @@ This question  require all pair number on the rang x and y.
 I use ternary operador in console.log to print only pair number
 for this, only use the mod function.
 */
-function question02(x, y){
+function pairs(x, y){
     for(x; x<=y; x++){
        console.log((x%2===0)?x:"");
     }
 };
+
+/*
+This question require a search on vector to find a skill. If the 
+Skill Javascrit exist on structure, return true else falso.
+*/ 
+function doHaveSkill(skills){
+    console.log((skills.indexOf("Javascript")==-1)?false:true);
+}
