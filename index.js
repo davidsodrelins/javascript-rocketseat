@@ -9,8 +9,21 @@
 //doHaveSkill(skills);
 
 //Question 04
-var studyYears = 4;
-experience(studyYears);
+//var studyYears = 4;
+//experience(studyYears);
+
+//Questão 5
+var users = [
+    {
+    name: "Diego",
+    skills: ["Javascript", "ReactJS", "Redux"]
+    },
+    {
+    name: "Gabriel",
+    skills: ["VueJS", "Ruby on Rails", "Elixir"]
+    }
+   ];
+   jReport(users);
 
 /*
 This question is simple and easy because use one object and data 
@@ -68,5 +81,15 @@ function experience(studyYears){
     }
     if(studyYears<0 || studyYears>100){
         console.log("Invalid Value");
+    }
+};
+
+/*
+This function print the name and skills users on object. use join to print all elements
+of array skills. and for of to scroll the vector
+*/
+function jReport(users){
+    for(var user of users){
+        console.log("The "+ user.name + " has the skills: " + user.skills.join());        
     }
 };
