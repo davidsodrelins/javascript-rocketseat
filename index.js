@@ -1,17 +1,32 @@
-console.log(questao01());
+//console.log(question01());
+question02(3,30);
 
 
-
-function questao01(){
-    var endereco = {
-        rua: "2ª Travessa Martacência",
-        numero: "100",
-        bairro: "Aguas Claras",
-        cidade: "Salvador",
-        uf: "BA"
+/*
+This question is simple and easy because use one object and data 
+and return the phrasal concatenated
+*/
+function question01(){
+    var adress = {
+        street: "2ª Travessa Martacência",
+        number: "100",
+        neighborhood: "Aguas Claras",
+        city: "Salvador",
+        state: "BA"
     }
 
-    return "O usuario mora em " + endereco.cidade + "/" + endereco.uf + 
-    ", no bairro " + endereco.bairro + ", na rua " + endereco.rua + ", com nº "
-    + endereco.numero;
+    return "The user live in " + adress.cidade + "/" + adress.uf + 
+    ", in neighborhood " + adress.neighborhood + ", on street " + adress.street + ", with nº "
+    + adress.number;
+};
+
+/*
+This question  require all pair number on the rang x and y.
+I use ternary operador in console.log to print only pair number
+for this, only use the mod function.
+*/
+function question02(x, y){
+    for(x; x<=y; x++){
+       console.log((x%2===0)?x:"");
+    }
 };
