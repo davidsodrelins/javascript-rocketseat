@@ -25,6 +25,7 @@ var users = [
    ];
    jReport(users);
 
+   
 /*
 This question is simple and easy because use one object and data 
 and return the phrasal concatenated
@@ -91,5 +92,7 @@ of array skills. and for of to scroll the vector
 function jReport(users){
     for(var user of users){
         console.log(`The ${user.name} has the skills ${user.skills.join()}`);        
+       // ou dessa forma sem o join() tambem funciona
+       // console.log(`The ${user.name} has the skills ${user.skills}`);        
     }
 };
