@@ -12,7 +12,7 @@
 //var studyYears = 4;
 //experience(studyYears);
 
-//Questão 5
+/*Questão 5
 var users = [
     {
     name: "David",
@@ -26,7 +26,7 @@ var users = [
    jReport(users);
 
    
-/*
+
 This question is simple and easy because use one object and data 
 and return the phrasal concatenated
 */
