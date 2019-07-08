@@ -2,6 +2,20 @@
 var appElement = document.querySelector("#app"); //busca a div com id='app' | get the div's id='app'
 var btnElement = document.createElement('button'); //cria um elemento botão | crete a new button element
 
+// ######## QUESTION 2 ############ 
+var nomes = ["Diego", "Gabriel", "Lucas"];
+var listElement = document.createElement('ul');
+listElement.setAttribute('id','listName');
+appElement.appendChild(listElement);
+
+for(var i=0; i<nomes.length; i++){
+    var itemtlistElement = document.createElement('li');
+    itemtlistElement.appendChild(document.createTextNode(nomes[i]));
+    listElement.appendChild(itemtlistElement);
+};
+
+//########   END  QUESTION 2 #########
+
 btnElement.setAttribute('class', 'botao'); //seta a classe botão ao button | set class botao to button
 var textElement = document.createTextNode('Generate Square'); //cria o rótulo do botão | Create label of button
 
@@ -9,7 +23,7 @@ btnElement.appendChild(textElement); //acrescenta o rotulo ao botão | append la
 appElement.appendChild(btnElement); //acrescenta o botão na div app | append button on app div
 
 btnElement.onclick = function () { //configura a ação do botão criado com uma função | setup a funcion action to button 
-    squareGenerate(); //função que desenha um quadrado | funcion to draw square
+    //squareGenerate(); //função que desenha um quadrado | funcion to draw square
 };
 
 function squareGenerate() {
