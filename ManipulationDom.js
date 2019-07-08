@@ -15,6 +15,10 @@ btnElement.onclick = function () { //configura a ação do botão criado com uma
 function squareGenerate() {
     var boxElement = document.createElement('div') //cria novo elemento | create a new element
 
+    boxElement.onmouseover = function(){ //adicionada a propriedade onmoseover com a execução da função para mudar a cor
+        boxElement.style.backgroundColor = getRandomColor(); //mudando a cor do quadrado
+    } 
+  
     boxElement.style.width = 100; // adiciona a largura 100 | set width 100
     boxElement.style.height = 100;// adiciona a altura 100 | set height 100
     boxElement.style.backgroundColor = "red"; //adiciona a cor vermelha | set red color
@@ -22,3 +26,12 @@ function squareGenerate() {
     appElement.appendChild(boxElement); //acrescenta o novo elemento a div app | apend a new element to div app
 };
 
+function getRandomColor() {
+    var letters = "0123456789ABCDEF";
+    var color = "#";
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+   
