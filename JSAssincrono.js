@@ -12,9 +12,13 @@ appElement.appendChild(buttonElement);
 appElement.appendChild(listElement);
 
 buttonElement.onclick = function(){
+    var itemElement = document.createElement('li');
+    itemElement.appendChild(document.createTextNode("Carregando..."));
+    listElement.appendChild(itemElement);
     searchUser();
 };
 
+//Function para pesquisar o usuário | Function to Search user
 function searchUser(){
     axios.get(`https://api.github.com/users/${inputElement.value}/repos`)
     .then(response => {
@@ -24,9 +28,13 @@ function searchUser(){
             add(rep.name);
         }
     })
-    .catch(error => {console.warn(`O usuário ${inputElement.value} não existe!`);})
+    .catch(error => {
+        alert(`O usuário ${inputElement.value} não existe!`);
+        listElement.innerHTML = "";
+    })
 };
 
+//Adiciona os repositíros na tela | Add repositoris on page HTML
 function add(repository){
     var itemElement = document.createElement('li');
     itemElement.appendChild(document.createTextNode(repository));
